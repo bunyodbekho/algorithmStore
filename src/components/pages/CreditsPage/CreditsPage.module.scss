@@ -1,0 +1,28 @@
+.creditspage {
+  padding: 50px 7%;
+  background-color: #101316;
+  .creditamount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .creditcard {
+    .form {
+      margin-top: 60px;
+      color: #fff;
+
+      h1 {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      .cardinputs {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+    }
+  }
+}

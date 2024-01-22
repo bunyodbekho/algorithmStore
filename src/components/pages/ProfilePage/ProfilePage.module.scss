@@ -3,6 +3,19 @@
   padding-top: 100px;
   padding-bottom: 300px;
 
+  .form {
+    display: flex;
+    width: 50%;
+    margin: auto;
+    background-color: #20282d;
+    margin-top: 50px;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    border-radius: 10px;
+    color: #fff;
+  }
+
   .spinner {
     height: 70vh;
     display: flex;
