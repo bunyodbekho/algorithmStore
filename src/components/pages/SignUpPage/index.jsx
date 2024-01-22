@@ -5,6 +5,7 @@ import supabase from "../../../service/supabaseClient";
 import { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useToast } from "@chakra-ui/react";
 
 export default function SignUpPage() {
   // FORM DATA
@@ -14,6 +15,17 @@ export default function SignUpPage() {
     watch,
     formState: { errors },
   } = useForm();
+
+  const [fetchError, setFetchError] = useState(null);
+  const toast = useToast();
+  const errorDis = (error) =>
+    toast({
+      title: "Error.",
+      description: error,
+      status: "error",
+      duration: 9000,
+      isClosable: true,
+    });
 
   // INSERT FUNCTION
   const insertUsr = async (username, password, email) => {
@@ -29,8 +41,13 @@ export default function SignUpPage() {
       if (data) {
         console.log(data);
       }
+      if (error) {
+        console.log(error);
+        setFetchError(error);
+      }
     } catch (error) {
       console.log(error);
+      setFetchError(error);
     }
   };
 
@@ -97,7 +114,16 @@ export default function SignUpPage() {
           </InputGroup>
         </div>
 
-        <Button colorScheme="green" type="submit">
+        <Button
+          colorScheme="green"
+          type="submit"
+          onClick={() => {
+            if (fetchError) {
+              errorDis(fetchError.details);
+            }
+            console.log(fetchError);
+          }}
+        >
           Sign Up
         </Button>
       </form>

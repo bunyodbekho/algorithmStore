@@ -27,6 +27,12 @@ export default function AddLanCodePage({ lan }) {
         .select();
       if (data) {
         console.log(data);
+        console.log("lan", lan);
+        console.log(code);
+        console.log(algId);
+      }
+      if (error) {
+        console.log(error);
       }
     } catch (error) {
       console.log(error);
@@ -42,7 +48,7 @@ export default function AddLanCodePage({ lan }) {
         .eq("algId", curAlg)
         .select();
       if (data) {
-        console.log(data);
+        console.log("data", data);
       }
     } catch (error) {
       console.log(error);
@@ -78,11 +84,11 @@ export default function AddLanCodePage({ lan }) {
 
   const onSubmit = (data) => {
     console.log(data);
-    if (textarea) {
-      updateCode(data.code);
-    } else {
-      insertCode(lan, data.code, curAlg);
-    }
+    insertCode(lan, data.code, curAlg);
+    // if (textarea) {
+    //   updateCode(data.code);
+    // } else {
+    // }
   };
   const handleInputChange = (e) => {
     let inputValue = e.target.value;

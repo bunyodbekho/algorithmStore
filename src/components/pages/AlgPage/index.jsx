@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import styles from "./AlgPage.module.scss";
-import { useParams } from "react-router";
+import { useParams, useOutletContext } from "react-router";
 import supabase from "../../../service/supabaseClient";
 import { Spinner } from "@chakra-ui/react";
 
@@ -61,6 +61,29 @@ export default function AlgPage() {
     [curLan]
   );
 
+  const { curUser } = useOutletContext();
+  console.log(curUser);
+
+  const [usrData, setUsrData] = useState([]);
+  const type = usrData[0]?.usrType;
+
+  useEffect(function () {
+    const fetchAlData = async (curUser) => {
+      let { data: user, error } = await supabase
+        .from("user")
+        .select("usrType")
+        .eq("usrName", `${curUser}`);
+
+      if (error) {
+        setUsrData(null);
+      }
+      if (user) {
+        setUsrData(user);
+      }
+    };
+    fetchAlData(curUser);
+  }, []);
+
   return (
     <div className={styles.algpage}>
       {!algData[0] ? (
@@ -87,9 +110,20 @@ export default function AlgPage() {
           <div className={styles.languages}>
             <button onClick={() => setCurLan("java")}>Java</button>
             <button onClick={() => setCurLan("python")}>Python</button>
-            <button onClick={() => setCurLan("javascript")}>JavaScript</button>
-            <button onClick={() => setCurLan("cpp")}>C++</button>
-            <button onClick={() => setCurLan("typescript")}>TypeScript</button>
+
+            {type === "premium" && (
+              <button onClick={() => setCurLan("javascript")}>
+                JavaScript
+              </button>
+            )}
+            {type === "premium" && (
+              <button onClick={() => setCurLan("cpp")}>C++</button>
+            )}
+            {type === "premium" && (
+              <button onClick={() => setCurLan("typescript")}>
+                TypeScript
+              </button>
+            )}
           </div>
         </div>
       )}
