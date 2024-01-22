@@ -62,6 +62,7 @@ export default function Router() {
           <Route path=":type" element={<SrtTypePage />} />
           <Route path=":type/:algorithm" element={<AlgPage />} />
         </Route>
+        <Route path="*" element={<Navigate to="/:username" />} />
       </Route>
     </Routes>
   );
