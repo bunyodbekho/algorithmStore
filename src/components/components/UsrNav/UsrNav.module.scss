@@ -1,0 +1,31 @@
+.usrnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 7%;
+  background-color: #1f272c;
+  color: #fff;
+
+  .logo {
+    font-size: 30px;
+    font-weight: 600;
+
+    a {
+      cursor: pointer;
+    }
+  }
+
+  .navlinks {
+    display: flex;
+    gap: 30px;
+
+    a {
+      font-size: 20px;
+      cursor: pointer;
+    }
+    a:hover {
+      color: #b0b0b0;
+      transition: 0.2s;
+    }
+  }
+}

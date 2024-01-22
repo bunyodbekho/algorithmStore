@@ -1,0 +1,18 @@
+.addlancodepage {
+  padding: 50px 7%;
+  background-color: #101316;
+  color: #fff;
+
+  h1 {
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    font-size: 40px;
+    font-weight: 700;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+}

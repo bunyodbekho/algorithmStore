@@ -1,0 +1,31 @@
+.loginpage {
+  background-color: #101316;
+  padding-top: 100px;
+  height: 100vh;
+
+  .form {
+    background-color: #20282d;
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 60px;
+    border-radius: 7px;
+
+    .formelement {
+      label {
+        color: #fff;
+        font-size: 18px;
+        margin-bottom: 10px;
+        display: block;
+      }
+      input {
+        color: #fff;
+      }
+    }
+  }
+}
+span {
+  font-size: 30px;
+}

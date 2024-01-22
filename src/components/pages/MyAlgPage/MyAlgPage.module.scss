@@ -1,0 +1,47 @@
+.myalgpage {
+  background-color: #101316;
+  padding: 50px 7%;
+
+  .topheader {
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+
+  .spinner {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .myalgs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 50px;
+
+    .algorithm {
+      padding: 30px;
+      border-radius: 10px;
+      background: #20282d;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+
+      h2 {
+        color: #38a169;
+        text-transform: capitalize;
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      h1 {
+        text-transform: capitalize;
+        font-size: 30px;
+      }
+    }
+  }
+}

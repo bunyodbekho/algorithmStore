@@ -1,0 +1,33 @@
+.profilepage {
+  background-color: #101316;
+  padding-top: 100px;
+  padding-bottom: 300px;
+
+  .spinner {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .usrData {
+    background-color: #20282d;
+    width: 50%;
+    margin: auto;
+    color: #fff;
+    padding: 50px;
+    border-radius: 15px;
+    .data {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 50px;
+
+      h1 {
+        font-size: 30px;
+        font-weight: 800;
+      }
+    }
+  }
+}

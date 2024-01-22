@@ -1,0 +1,25 @@
+.signuppage {
+  background-color: #101316;
+  color: #fff;
+  height: 100vh;
+  padding-top: 100px;
+
+  .form {
+    background-color: #20282d;
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 60px;
+    border-radius: 7px;
+
+    .formelement {
+      label {
+        font-size: 18px;
+        margin-bottom: 10px;
+        display: block;
+      }
+    }
+  }
+}

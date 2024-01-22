@@ -1,0 +1,25 @@
+.srtpage {
+  padding: 100px 7% 450px 7%;
+  background-color: #101316;
+
+  .spinner {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    text-transform: capitalize;
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .sortedbox {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+  }
+}

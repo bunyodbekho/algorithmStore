@@ -1,0 +1,41 @@
+.infopage {
+  background-color: #101316;
+  .header {
+    height: 70vh;
+    color: #fff;
+    padding: 50px 7%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    h1 {
+      font-size: 50px;
+
+      span {
+        font-size: 65px;
+      }
+    }
+  }
+
+  .info {
+    padding: 100px 7%;
+    color: #fff;
+
+    .infobox {
+      padding: 50px 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      background-color: #20282d;
+      border-radius: 7px;
+
+      h2 {
+        font-size: 30px;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}

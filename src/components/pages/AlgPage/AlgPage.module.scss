@@ -1,0 +1,61 @@
+.algpage {
+  padding: 50px 7%;
+  background-color: #101316;
+
+  .spinner {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .algMetaData {
+    text-transform: capitalize;
+    margin-bottom: 40px;
+
+    h2 {
+      font-size: 20px;
+      color: #38a169;
+      font-weight: 700;
+    }
+    h1 {
+      font-size: 35px;
+      color: #fff;
+      font-weight: 600;
+    }
+  }
+
+  .codeView {
+    height: 400px;
+    overflow: scroll;
+    background: #20282d;
+    color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+
+    p {
+      font-size: 16px;
+      white-space: pre-wrap;
+    }
+  }
+
+  .languages {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+
+    button {
+      background: #38a169;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 20px;
+      font-weight: 700;
+    }
+    button:hover {
+      background: #2b744d;
+      transition: 0.3s;
+    }
+  }
+}
